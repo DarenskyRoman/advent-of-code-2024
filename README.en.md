@@ -11,4 +11,4 @@ Successful attempt = ⭐
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---: |
-| [1](https://adventofcode.com/2024/day/1) |  |  |
+| [1](https://adventofcode.com/2024/day/1) | ⭐ | ⭐ |
