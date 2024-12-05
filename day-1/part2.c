@@ -10,7 +10,7 @@ int main(){
 	char buff[16];
 	int leftArr[1000];
 	int rightArr[1000];
-	int diff = 0;
+	int similarity = 0;
 
     FILE *input = fopen("input.txt", "r");
 
@@ -28,13 +28,23 @@ int main(){
 		i++;
     }
 
+    //probably you can do it without sorting, but i'm lazy
     qsort(leftArr, 1000, sizeof(int), comparator);
     qsort(rightArr, 1000, sizeof(int), comparator);
 
+    int j = 0;
+    int t = 0;
     for(i = 0; i < 1000; i++){
-    	diff += abs(leftArr[i] - rightArr[i]);
+    	for(j = 0; j < 1000; j++){
+     		if(rightArr[j] == leftArr[i])
+       			t++;
+       		if(rightArr[j] > leftArr[i])
+         		break;
+     	}
+    	similarity += leftArr[i] * t;
+     	t = 0;
     }
 
-    printf("%d\n", diff);
+    printf("%d\n", similarity);
     return 0;
 }

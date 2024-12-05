@@ -3,4 +3,5 @@ part1: part1.c
 	./part1
 
 part2:
-	echo "poop"
+	gcc part2.c -o part2
+	./part2
