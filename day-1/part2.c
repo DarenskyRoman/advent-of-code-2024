@@ -1,3 +1,4 @@
+//Answer: 25574739
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -20,7 +21,7 @@ int main(){
     }
 
     int i = 0;
-    while(fgets(buff, 15, input) != NULL){
+    while(fgets(buff, 16, input) != NULL){
 	    char* token = strtok(buff, " ");
 		leftArr[i] = atoi(token);
 		token = strtok(NULL, " ");
@@ -28,7 +29,6 @@ int main(){
 		i++;
     }
 
-    //probably you can do it without sorting, but i'm lazy
     qsort(leftArr, 1000, sizeof(int), comparator);
     qsort(rightArr, 1000, sizeof(int), comparator);
 

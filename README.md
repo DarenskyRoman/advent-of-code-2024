@@ -12,3 +12,4 @@
 | День | Часть 1 | Часть 2 |
 | :---: | :---: | :---: |
 | [1](https://adventofcode.com/2024/day/1) | ⭐ | ⭐ |
+| [2](https://adventofcode.com/2024/day/2) | ⭐ | ⭐ |
