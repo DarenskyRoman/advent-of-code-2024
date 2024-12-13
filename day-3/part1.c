@@ -5,7 +5,6 @@
 
 int main(){
 	char* pBuff;
-	char* dBuff;
 	char buff[20000];
 	char len[13];
 	int a = 0;
