@@ -3,13 +3,13 @@
 [![ru](https://img.shields.io/badge/lang-ru-blue.svg)](https://github.com/DarenskyRoman/advent-of-code-2024/blob/main/README.ru.md)
 [![en](https://img.shields.io/badge/lang-en-pink.svg)](https://github.com/DarenskyRoman/advent-of-code-2024/blob/main/README.md)
 
-My attempts to solve the [Advent of Code 2024](https://adventofcode.com/2024) challenges using С language.
+Мои попытки решить испытания [Advent of Code 2024](https://adventofcode.com/2024) используя язык С.
 
-## Results
+## Результаты
 
-Successful attempt = ⭐
+Успешная попытка = ⭐
 
-| Day | Part 1 | Part 2 |
+| День | Часть 1 | Часть 2 |
 | :---: | :---: | :---: |
 | [1](https://adventofcode.com/2024/day/1) | ⭐ | ⭐ |
 | [2](https://adventofcode.com/2024/day/2) | ⭐ | ⭐ |
