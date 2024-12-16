@@ -34,9 +34,6 @@ int main(){
 		i++;
 	}
 
-	//printf("%lu\n", sizeof(array)/sizeof(array[0]));
-	//printf("%lu\n", sizeof(array[0]));
-
 	for(i = 0; i < sizeof(array)/sizeof(array[0]); i++){
 		for(int j = 0; j < sizeof(array[0]); j++){
 
