@@ -13,8 +13,8 @@ int main(){
 		{1, 0},
 		{0, -1}
 	};
-	int dir[2] = {-1, 0};
 	int pos[2];
+	int dir = 0;
 	int distinct = 1;
 
 	FILE *input = fopen("input.txt", "r");
@@ -36,32 +36,31 @@ int main(){
 
 		i++;
 	}
+	fclose(input);
 
 	i = 0;
 
 	while(1){
 
-		if(pos[0] + dir[0] < 0|| pos[1] + dir[1] < 0 ||
-			pos[0] + dir[0] > sizeof(map[1]) - 1 ||
-			pos[1] + dir[1] > sizeof(map[1]) - 1){
+		if(pos[0] + dirs[dir][0] < 0|| pos[1] + dirs[dir][1] < 0 ||
+			pos[0] + dirs[dir][0] > sizeof(map[1]) - 1 ||
+			pos[1] + dirs[dir][1] > sizeof(map[1]) - 1){
 
 				break;
 			}
 
-		if(map[pos[0] + dir[0]][pos[1] + dir[1]] == '#'){
-			i++;
-			dir[0] = dirs[i % 4][0];
-			dir[1] = dirs[i % 4][1];
+		if(map[pos[0] + dirs[dir][0]][pos[1] + dirs[dir][1]] == '#'){
+			dir = (dir + 1) % 4;
 		}
-		else if(map[pos[0] + dir[0]][pos[1] + dir[1]] == 'X'){
-			pos[0] += dir[0];
-			pos[1] += dir[1];
+		else if(map[pos[0] + dirs[dir][0]][pos[1] + dirs[dir][1]] == 'X'){
+			pos[0] += dirs[dir][0];
+			pos[1] += dirs[dir][1];
 		}
 		else{
-			if(map[pos[0] + dir[0]][pos[1] + dir[1]] == '.')
+			if(map[pos[0] + dirs[dir][0]][pos[1] + dirs[dir][1]] == '.')
 				distinct++;
-			pos[0] += dir[0];
-			pos[1] += dir[1];
+			pos[0] += dirs[dir][0];
+			pos[1] += dirs[dir][1];
 			map[pos[0]][pos[1]] = 'X';
 		}
 
